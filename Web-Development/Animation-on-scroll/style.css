@@ -1,0 +1,48 @@
+body{
+    background-color: #131316;
+    color:#ffffff;
+    font-family: 'Popins', sans-serif;
+    padding: 0;
+    margin:0;
+}
+
+
+section{
+     display: grid;
+     place-items: center;
+     /* Squizze everything to the middle */
+     align-content: center;
+     min-height: 100vh;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 3s;
+    
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+
+}
+
+/* Explain this to me */
+
+@media(prefers-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+}
+
+.logo:nth-child(2){
+    transition-delay: 200ms;
+}
+.logo:nth-child(3){
+    transition-delay: 200ms;
+}
+.logo:nth-child(4){
+    transition-delay: 200ms;
+}
